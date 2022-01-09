@@ -1,0 +1,79 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.home {
+    height: 100%;
+}
+
+.header {
+    font-size: 2em;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1em;
+}
+
+.github-link,
+.linkedin-link,
+.resume-link,
+.email-link {
+    padding: 10%;
+}
+
+a:link {
+    color: whitesmoke;
+    text-decoration: none;
+}
+a:visited {
+    color: whitesmoke;
+}
+a:hover {
+    font-style: italic;
+}
+
+#home-background-image {
+    background-image: url('images/home-background.jpg'); 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover;  
+}
+
+svg {
+    height: 24px;
+    width: 24px;
+    fill: whitesmoke;
+}
+
+.linkedin-link svg {
+    border: 2px solid white;
+    padding: 2px 3px;
+    border-radius: 6px;
+    height: 24px;
+}
+
+.email-link svg {
+    margin-top: 1px;
+}
