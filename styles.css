@@ -24,7 +24,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 96%;
+    height: 97%;
     flex-direction: column;
 }
 
@@ -92,6 +92,6 @@ svg {
 }
 
 span {
-    color: white;
     font-size: .7em;
+    color:rgb(58, 59, 59);
 }
