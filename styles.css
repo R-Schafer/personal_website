@@ -24,7 +24,7 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 96%;
     flex-direction: column;
 }
 
@@ -66,6 +66,8 @@ a:hover {
     }
 }
 
+/* icons */
+
 svg {
     height: 24px;
     width: 24px;
@@ -81,4 +83,15 @@ svg {
 
 .email-link svg {
     margin-top: 1px;
+}
+
+/* footer */
+
+.footer{
+    text-align: center;
+}
+
+span {
+    color: white;
+    font-size: .7em;
 }
