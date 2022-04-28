@@ -17,7 +17,7 @@ body {
 }
 
 .page-container {
-  width: 100%;
+  width: 99%;
   line-height: 1.5;
 }
 /* ______________________ Header and Icons______________________ */
@@ -95,12 +95,7 @@ h2 {
 
 h3 {
   font-size: 1rem;
-  margin-top: 5px;
-  margin-left: 5px;
-}
-
-.projects-content h3 {
-  margin-top: 7px;
+  margin: 12px 0 0 20px;
 }
 
 li {
@@ -116,9 +111,7 @@ li {
 
 p {
   font-size: 1rem;
-  margin-top: 2px;
-  margin-left: 2px;
-  margin-right: 2%;
+  margin: 2px 2px 0 20px;
 }
 
 /* laying out the skills section */
@@ -143,7 +136,7 @@ p {
 /* spacing the sections of the resume */
 
 .about-container {
-  padding: 2px 0 8px 0;
+  padding: 12px 0 8px 0;
 }
 
 .skills-container,
@@ -151,7 +144,7 @@ p {
 .projects-container,
 .education-container {
   border-top: 1px solid black;
-  padding: 2px 0 8px 0;
+  padding: 6px 0 10px 0;
 }
 
 .skills-content ul,
@@ -168,7 +161,7 @@ p {
 
 .projects-content li,
 .education-content li {
-  margin-left: 1.5rem;
+  margin-left: 50px;
 }
 
 /* laying out the education section */
@@ -192,18 +185,15 @@ p {
   color: black;
 }
 
-a:link,
-.projects-content span {
+a:link {
   color: blue;
   text-decoration: none;
 }
-a:visited,
-.projects-content span {
+a:visited {
   color: blue;
 }
-a:hover,
-.projects-content span {
-  font-style: italic;
+a:hover {
+  text-decoration: underline;
 }
 
 /* ______________________ Media Queries______________________ */
