@@ -1,61 +1,62 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    flex-wrap:  wrap;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
-html, body {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+html,
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 body {
-    margin: 0 auto;
-    width: min(98ch,100vw - 2rem);
+  margin: 0 auto;
+  width: min(100ch, 100vw - 2rem);
 }
 
 .page-container {
-    width: 100%;
-    line-height: 1.5;
+  width: 100%;
+  line-height: 1.5;
 }
 /* ______________________ Header and Icons______________________ */
 .header {
-    width: 100%;
-    margin-top: .3rem;
+  width: 100%;
+  margin-top: 0.3rem;
 }
 
 .name {
-    font-size: 1.5rem;
-    color: black;
-    text-align: center;
-    margin-bottom: .5rem;
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
-.icons li{
-    list-style-type: none;
+.icons li {
+  list-style-type: none;
 }
 
 .icons span {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
-.icons ul{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2%;
-    flex-wrap: wrap;
+.icons ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 svg {
-    height: 18px;
-    width: 16px;
-    fill: black;
-    margin: .2rem;
+  height: 18px;
+  width: 16px;
+  fill: black;
+  margin: 0.2rem;
 }
 
 .linkedin-link svg {
-    height: 17px;
-    width: 15px;
+  height: 17px;
+  width: 15px;
 }
 
 .website-icon-container,
@@ -63,10 +64,10 @@ svg {
 .github-icon-container,
 .location-icon-container,
 .linkedin-icon-container {
-    display: flex;
+  display: flex;
 }
 .email-icon-container {
-    margin-left: .3rem;
+  margin-left: 0.3rem;
 }
 
 .website-info,
@@ -74,7 +75,7 @@ svg {
 .github-info,
 .location-info,
 .linkedin-info {
-    padding: 0 10px 0 2px;
+  padding: 0 10px 0 2px;
 }
 
 /* ______________________ Content of resume______________________ */
@@ -82,237 +83,216 @@ svg {
 /* font size and spacing */
 
 .content-container {
-    height: 100%;
-    padding: 0 2% 2%;
+  height: 100%;
+  padding: 0 2% 2%;
 }
 
 h2 {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-top: .5rem
-}
-.about h2 {
-    margin-top: 0
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 5px;
 }
 
 h3 {
-    font-size: 1rem;
-    margin-top: .5rem;
-    margin-left: .2rem;
+  font-size: 1rem;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.projects-content h3 {
+  margin-top: 7px;
 }
 
 li {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
-.experience-content span,
-.education-content span {
-    font-size: .9rem;
-    font-weight: normal;
-    font-style: italic;
+.education-content span,
+.projects-content span {
+  font-size: 0.9rem;
+  font-weight: normal;
+  font-style: italic;
 }
 
 p {
-    font-size: 1rem;
-    margin-top: .5rem;
-    margin-left: .2rem;
-    margin-right: 2%;
+  font-size: 1rem;
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-right: 2%;
 }
-
 
 /* laying out the skills section */
 .skills-content {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
-
 
 /* putting pipes between skills and strengths*/
 
 .skills-container li::after,
 .strengths-container li::after {
-    content: "|";
-    margin: 0 1ch;
+  content: "|";
+  margin: 0 1ch;
 }
 
 .skills-list2 li:last-child:after,
 .strengths-container li:last-child:after {
-    content: "";
+  content: "";
 }
 
 /* spacing the sections of the resume */
 
 .about-container {
-    padding: 1% 2% 2% 2%;
+  padding: 2px 0 8px 0;
 }
 
 .skills-container,
 .strengths-container,
 .projects-container,
-.experience-container, 
 .education-container {
-    border-top: 1px solid black;
-    padding: 1% 2% 2% 2%;
+  border-top: 1px solid black;
+  padding: 2px 0 8px 0;
 }
 
 .skills-content ul,
 .strengths-content ul {
-    display: flex;
-    list-style-type: none;
-    justify-content: center;
-    padding-top: .2rem;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding-top: 2px;
 }
 
 .projects-content ul {
-    justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
 .projects-content li,
-.experience-content li {
-    margin-left: 1.5rem;
+.education-content li {
+  margin-left: 1.5rem;
+}
+
+/* laying out the education section */
+.web-dev-container,
+.learn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.web-dev2,
+.learn2 {
+  min-width: 400px;
 }
 
 /* link styles */
 
-
 .icons a:link {
-    color:black;
+  color: black;
 }
 .icons a:visited {
-    color:black;
+  color: black;
 }
 
-a:link {
-    color: blue;
-    text-decoration: none;
+a:link,
+.projects-content span {
+  color: blue;
+  text-decoration: none;
 }
-a:visited {
-    color: blue;
+a:visited,
+.projects-content span {
+  color: blue;
 }
-a:hover {
-    font-style: italic;
+a:hover,
+.projects-content span {
+  font-style: italic;
 }
 
 /* ______________________ Media Queries______________________ */
 
 @media print {
-    body {
-        width: 99%;
-    }
-    
-    a:link {
+  body {
+    width: 100%;
+  }
+
+  a:link {
     color: black;
-    }
+  }
 
-    .page-container {
+  .page-container {
     line-height: normal;
-    }
+  }
 
-    svg {
-        height: 16px;
-        width: 14px;
-        margin: .1rem;
-    }
-} 
-
+  svg {
+    height: 16px;
+    width: 14px;
+    margin: 0.1rem;
+  }
+}
 
 @media screen and (max-width: 745px) {
+  /* removing pipes from strengths as screen shrinks*/
+  .strengths-container li::after {
+    content: "";
+  }
 
-    /* removing pipes from strengths as screen shrinks*/
-    .strengths-container li::after {
-        content: "";
-    }
+  .skills-content {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-    .skills-content{
-        justify-content: center;
-        display: flex;
-        flex-wrap: wrap;
-    }
+  /* making sure the strength lists collapses nicely */
+  .strengths-content {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-    /* making sure the strength lists collapses nicely */
-    .strengths-content {
-        justify-content: center;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .strengths-list1 ul{
-        display:flex;
-        flex-wrap: wrap;
-        justify-content:center;
-        min-width: 200px;
-        max-width: 200px;
-    }
-    
-    .strengths-list2 ul {
-        flex-wrap: wrap;
-        min-width: 200px;
-        max-width: 200px;
-    }
-    
-    /* adding space between sections */
-    p,
-    .skills-content,
-    .strengths-content,
-    .projects-content,
-    .experience-content {
-        margin-bottom: 1rem;
-    }
+  .strengths-list1 ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: 200px;
+    max-width: 200px;
+  }
 
-    .about h2 {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
+  .strengths-list2 ul {
+    flex-wrap: wrap;
+    min-width: 200px;
+    max-width: 200px;
+  }
 
-    h2 {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
+  /* making sure education lists collapses nicely */
 
-    .projects-content li:last-child,
-    .experience-content li:last-child {
-        margin-bottom: 1.5rem;
-    }
+  /* adding space between sections */
+  p,
+  .skills-content,
+  .strengths-content,
+  .projects-content {
+    margin-bottom: 5px;
+  }
+
+  .projects-content li:last-child {
+    margin-bottom: 5px;
+  }
 }
-
 
 @media screen and (max-width: 556px) {
+  /* removing pipes from skills as screen shrinks*/
+  .skills-container li::after {
+    content: "";
+  }
 
-    /* removing pipes from skills as screen shrinks*/
-    .skills-container li::after {
-        content: "";
-    }
-
-     /* making sure the skill list collapses nicely */
-    .skills-content{
-        justify-content: center;
-        display: flex;
-        flex-wrap: wrap;
-    } 
-
-    /* moving the about section down */
-    .about h2 {
-        margin-top: 2rem;
-    }
+  /* making sure the skill list collapses nicely */
+  .skills-content {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
-
-
 
 @media screen and (max-width: 400px) {
-
-    /* making sure the skill list collapses nicely */
-    .icons li{
-        margin: 1px 40px 1px 40px;
-    }
+  /* making sure the skill list collapses nicely */
+  .icons li {
+    margin: 1px 40px 1px 40px;
+  }
 }
-
-
-
-
-/* 
-link the top section to appropriate sites
-*/
-
-
-
-
