@@ -8,7 +8,7 @@
 html,
 body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+    "Lucida Sans", sans-serif;
 }
 
 body {
@@ -17,34 +17,30 @@ body {
 }
 
 .page-container {
-  width: 99%;
-  line-height: 1.5;
-}
-/* ______________________ Header and Icons______________________ */
-.header {
   width: 100%;
-  margin-top: 0.3rem;
+  line-height: 1.4;
 }
 
-.name {
-  font-size: 1.5rem;
+/* ______________________ All Links and Icons______________________ */
+.header-icons a:link,
+.header-icons a:visited {
   color: black;
-  text-align: center;
-  margin-bottom: 0.5rem;
+  text-decoration: none;
 }
 
-.icons li {
-  list-style-type: none;
+.portfolio-content a:link,
+.portfolio-content a:visited,
+.education-content a:link,
+.education-content a:visited {
+  color: blue;
+  text-decoration: none;
 }
 
-.icons span {
-  font-size: 1rem;
-}
-
-.icons ul {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.portfolio-content a:hover,
+.header-icons a:hover,
+.education-content a:hover {
+  text-decoration: underline;
+  color: blue;
 }
 
 svg {
@@ -54,157 +50,188 @@ svg {
   margin: 0.2rem;
 }
 
-.linkedin-link svg {
+.email svg,
+.website svg {
+  margin-right: 5px;
+}
+
+.linkedin svg {
   height: 17px;
   width: 15px;
 }
 
-.website-icon-container,
-.email-icon-container,
-.github-icon-container,
-.location-icon-container,
-.linkedin-icon-container {
+/* ______________________ Header______________________ */
+header {
+  width: 100%;
+  margin-top: 20px;
   display: flex;
-}
-.email-icon-container {
-  margin-left: 0.3rem;
-}
-
-.website-info,
-.email-info,
-.github-info,
-.location-info,
-.linkedin-info {
-  padding: 0 10px 0 2px;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* ______________________ Content of resume______________________ */
+.name {
+  font-size: 1.5rem;
+  color: black;
+  text-align: center;
+}
 
-/* font size and spacing */
+.header-icons {
+  display: flex;
+  width: 100%;
+  margin: 3px 0 10px 0;
+}
 
-.content-container {
+.icon-container {
+  display: flex;
+  width: 200px;
+}
+
+.website,
+.email,
+.location,
+.linkedin,
+.github {
+  display: flex;
+  align-items: end;
+  padding: 0 5px;
+}
+
+.header-icons span {
+  font-size: 1rem;
+}
+
+.temp-hide {
+  display: none;
+}
+
+/* ______________________ Main______________________ */
+
+main {
   height: 100%;
-  padding: 0 2% 2%;
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-top: 5px;
 }
 
 h3 {
-  font-size: 1rem;
-  margin: 12px 0 0 20px;
+  font-size: 1.1rem;
 }
 
-li {
-  font-size: 1rem;
-}
-
-.education-content span,
-.projects-content span {
-  font-size: 0.9rem;
-  font-weight: normal;
-  font-style: italic;
-}
-
+li,
 p {
   font-size: 1rem;
-  margin: 2px 2px 0 20px;
 }
 
-/* laying out the skills section */
-.skills-content {
+.skills,
+.portfolio,
+.education,
+hr {
+  margin-top: 10px;
+}
+
+.about-content,
+.skills-content,
+.portfolio-content,
+.education-content {
+  margin-left: 10px;
+}
+
+.portfolio-content h3,
+.education-content h3 {
+  padding-top: 10px;
+}
+
+.about-content p,
+.skills-content span {
+  padding-top: 5px;
+}
+
+.skills-content span {
   display: flex;
-  justify-content: center;
+  flex-wrap: unset;
 }
 
-/* putting pipes between skills and strengths*/
-
-.skills-container li::after,
-.strengths-container li::after {
-  content: "|";
-  margin: 0 1ch;
+.skills-content h3 {
+  padding-right: 5px;
 }
 
-.skills-list2 li:last-child:after,
-.strengths-container li:last-child:after {
-  content: "";
-}
-
-/* spacing the sections of the resume */
-
-.about-container {
-  padding: 12px 0 8px 0;
-}
-
-.skills-container,
-.strengths-container,
-.projects-container,
-.education-container {
-  border-top: 1px solid black;
-  padding: 6px 0 10px 0;
-}
-
-.skills-content ul,
-.strengths-content ul {
-  display: flex;
-  list-style-type: none;
-  justify-content: center;
-  padding-top: 2px;
-}
-
-.projects-content ul {
-  justify-content: space-evenly;
-}
-
-.projects-content li,
+.portfolio-content li,
 .education-content li {
-  margin-left: 50px;
+  padding-top: 3px;
 }
 
-/* laying out the education section */
-.web-dev-container,
-.learn-container {
+.portfolio-content ul,
+.education-content ul {
+  padding-left: 20px;
+}
+
+.portfolio-content span {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.education-content a,
+.portfolio-content .repo {
+  font-size: 1rem;
+}
+
+.web-dev-left,
+.learn-left {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
-.web-dev2,
-.learn2 {
-  min-width: 400px;
+.web-dev-right,
+.learn-right {
+  display: flex;
+  flex-direction: column;
+}
+.education-content {
+  max-width: 700px;
 }
 
-/* link styles */
-
-.icons a:link {
-  color: black;
+.education {
+  margin-bottom: 20px;
 }
-.icons a:visited {
-  color: black;
-}
-
-a:link {
-  color: blue;
-  text-decoration: none;
-}
-a:visited {
-  color: blue;
-}
-a:hover {
-  text-decoration: underline;
-}
-
 /* ______________________ Media Queries______________________ */
 
 @media print {
   body {
     width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
   }
 
-  a:link {
-    color: black;
+  .name {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  p,
+  li,
+  .header-icons span,
+  .skills-content span,
+  .portfolio-content span,
+  .education-content a,
+  .portfolio-content .repo {
+    font-size: 14px;
+  }
+
+  .temp-hide {
+    display: flex;
   }
 
   .page-container {
@@ -216,73 +243,44 @@ a:hover {
     width: 14px;
     margin: 0.1rem;
   }
-}
 
-@media screen and (max-width: 745px) {
-  /* removing pipes from strengths as screen shrinks*/
-  .strengths-container li::after {
-    content: "";
-  }
-
-  .skills-content {
-    justify-content: center;
+  .web-dev-container,
+  .learn-container {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 650px;
   }
 
-  /* making sure the strength lists collapses nicely */
-  .strengths-content {
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .strengths-list1 ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    min-width: 200px;
-    max-width: 200px;
-  }
-
-  .strengths-list2 ul {
-    flex-wrap: wrap;
-    min-width: 200px;
-    max-width: 200px;
-  }
-
-  /* making sure education lists collapses nicely */
-
-  /* adding space between sections */
-  p,
-  .skills-content,
-  .strengths-content,
-  .projects-content {
-    margin-bottom: 5px;
-  }
-
-  .projects-content li:last-child {
-    margin-bottom: 5px;
+  .education {
+    margin-bottom: 0;
   }
 }
 
-@media screen and (max-width: 556px) {
-  /* removing pipes from skills as screen shrinks*/
-  .skills-container li::after {
-    content: "";
-  }
-
-  /* making sure the skill list collapses nicely */
-  .skills-content {
+@media (min-width: 520px) {
+  .icon-container {
     justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 400px) {
-  /* making sure the skill list collapses nicely */
-  .icons li {
-    margin: 1px 40px 1px 40px;
+@media screen and (min-width: 650px) {
+  .web-dev-container,
+  .learn-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .temp-hide {
+    display: flex;
+  }
+}
+
+/* removing hover from touch devices */
+@media (hover: none) {
+  .header-icons a:hover {
+    color: black;
+    text-decoration: none;
   }
 }

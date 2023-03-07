@@ -1,97 +1,469 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  letter-spacing: 1px;
 }
 
-.home {
-    height: 100%;
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.header {
-    font-size: 2em;
-    color: whitesmoke;
-    text-align: center;
+/* ------------------------ header section ------------------------ */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
 }
 
-.page-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 97%;
-    flex-direction: column;
+.logo {
+  margin: 10px;
+  background-color: #dc7f0e;
+  padding: 7px 15px 12px 15px;
+}
+
+.logo span {
+  color: black;
+  font-size: 25px;
+  font-family: "Gloock", serif;
+}
+
+.logo a:link,
+.logo a:visited,
+.logo a:hover,
+.logo a:active {
+  text-decoration: none;
+  color: black;
+}
+
+.logo span:hover {
+  color: white;
+}
+
+/* -------- menu button -------- */
+button {
+  position: relative;
+}
+
+.hamburger {
+  width: 48px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 0px 6px;
+  background-color: #dc7f0e;
+  z-index: 5;
+  margin: 10px;
+}
+
+.hamburger .bar,
+.hamburger:before,
+.hamburger:after {
+  height: 3px;
+  background-color: black;
+  margin: 5px 4px;
+  transition: 0.4s;
+  content: "";
+  display: block;
+}
+
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-7px, 5px);
+}
+
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-6px, -5px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+/* -------- repeat fonts -------- */
+
+.menu .title,
+.mobile-nav .title,
+.intro .title {
+  font-size: 17px;
+  color: #dc7f0e;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", sans-serif;
+}
+
+/* -------- mobile menu display -------- */
+
+.mobile-nav {
+  position: fixed;
+  left: 100%;
+  width: 70%;
+  min-height: 100vh;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  justify-content: space-evenly;
+}
+
+.mobile-nav.is-active {
+  left: 30%;
+  padding-right: 10px;
+  background-color: rgb(17 17 17 / 70%);
+}
+
+#about,
+#twitter,
+#world,
+#calculator,
+#weather {
+  font-size: 21px;
+  font-family: "Gloock", serif;
+  color: white;
+  width: 214px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.hover-nav {
+  display: flex;
+  height: 15px;
+  margin-top: 25px;
+  padding-bottom: 1px;
+  align-items: end;
+  justify-content: end;
+  transition: background-color 250ms cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+
+.hover-nav:hover {
+  background-color: #dc7f0e;
+  cursor: pointer;
+}
+
+.about-container,
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-content: end;
+  justify-content: end;
+  align-items: end;
+  padding-bottom: 45px;
+}
+
+/* -------- contact icons -------- */
+.link-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link {
+  padding: 5px 0 5px 15px;
+  background-color: transparent;
+}
+
+svg {
+  height: 30px;
+  fill: white;
+}
+
+svg:hover {
+  fill: #dc7f0e;
+}
+
+/* ------------------------ main section ------------------------ */
+
+main {
+  padding-top: 20px;
+  flex-grow: 1;
+}
+
+/* -------- images -------- */
+img {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+}
+
+img.hidden {
+  display: none;
+}
+
+/* -------- hero -------- */
+
+.hero-container {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  min-height: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+}
+
+/* ------------------ left side of page ------------------ */
+
+.hero-left {
+  height: 100%;
+  max-width: 288px;
+  position: absolute;
+}
+
+.intro {
+  padding-top: 30px;
+  animation: fadeIn 1s;
+}
+
+/* hides when an li is selected */
+.intro.hidden {
+  display: none;
+}
+
+/* toggle hides when the menu opens and closes */
+.intro.no-show {
+  opacity: 0;
+}
+
+p {
+  font-size: 26px;
+  font-family: "Gloock", serif;
+}
+
+/* -------- blurb section -------- */
+
+#blurb {
+  width: 100%;
+  background-color: rgb(255 255 255 / 70%);
+  color: #040000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#blurb.hidden {
+  display: none;
+}
+
+/* toggle hides when the menu opens and closes */
+#blurb.no-show {
+  opacity: 0;
+}
+
+#about p {
+  padding-bottom: 5px;
+}
+
+.used {
+  font-size: 14px;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.used span {
+  padding: 2px 3px;
+  border-radius: 3px;
+  margin: 1px 4px 4px 0px;
+  background-color: #444444;
+}
+
+#blurb .title {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", sans-serif;
+  color: #dc7f0e;
+  padding: 10px 0 5px;
+}
+
+#blurb p {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+#blurb .features {
+  padding-bottom: 13px;
+}
+
+#blurb .features li {
+  font-size: 16px;
+  font-family: "Gloock", serif;
+  margin-left: 17px;
+}
+
+/* ------------------ right side of page ------------------ */
+
+.hero-right {
+  position: relative;
+  align-self: flex-end;
+  width: 300px;
+  right: 0px;
 }
 
 .menu {
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-    max-width: 200px;
-}
-
-a:link {
-    color: whitesmoke;
-    text-decoration: none;
-}
-a:visited {
-    color: whitesmoke;
-}
-a:hover {
-    font-style: italic;
-}
-
-#home-background-image {
-    background-image: url('images/home-background-small.jpg'); 
-    background-position: center center; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    background-size: cover;  
-}
-
-@media screen and (min-width: 600px) {
-    #home-background-image {
-        background-image: url('images/home-background-medium.jpg'); 
-    }
-}
-
-@media screen and (min-width: 800px) {
-    #home-background-image {
-        background-image: url('images/home-background-large.jpg'); 
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: end;
+  min-height: 70vh;
 }
 
 /* icons */
-
-svg {
-    height: 24px;
-    width: 24px;
-    fill: whitesmoke;
+.go-to-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0;
 }
 
-.linkedin-link svg {
-    border: 2px solid white;
-    padding: 2px 3px;
-    border-radius: 6px;
-    height: 24px;
+.go-to-links svg {
+  fill: black;
+  padding-right: 10px;
 }
 
-.email-link svg {
-    margin-top: 1px;
+.go-to-links .open {
+  height: 28px;
 }
 
-/* footer */
-
-.footer{
-    text-align: center;
+.go-to-links svg:hover {
+  fill: #dc7f0e;
 }
 
-span {
-    font-size: .7em;
-    color:rgb(58, 59, 59);
+/* ------------------------ footer section ------------------------ */
+footer {
+  font-size: 12px;
+  color: #dc7f0e;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", sans-serif;
+  letter-spacing: 0;
+  text-align: center;
+  padding: 5px;
+  z-index: 1;
+}
+
+/* ------------------------ media queries ------------------------ */
+
+/* removing hover from touch devices */
+@media (hover: none) {
+  .go-to-links svg:hover {
+    fill: inherit;
+  }
+
+  svg:hover {
+    fill: white;
+  }
+  .logo span:hover {
+    color: inherit;
+  }
+  .hover-nav:hover {
+    background-color: transparent;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-nav,
+  button {
+    display: none;
+  }
+
+  #about,
+  #twitter,
+  #world,
+  #calculator,
+  #weather {
+    font-size: 30px;
+    width: 350px;
+  }
+
+  .hover-nav {
+    height: 19px;
+  }
+
+  .intro p {
+    font-size: 30px;
+  }
+
+  .logo span {
+    font-size: 50px;
+  }
+
+  #blurb {
+    animation: none;
+  }
+
+  #blurb p {
+    font-size: 22px;
+  }
+
+  #blurb .features li {
+    font-size: 18px;
+  }
+
+  #blurb .used {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #about,
+  #twitter,
+  #world,
+  #calculator,
+  #weather {
+    font-size: 50px;
+    width: 600px;
+  }
+
+  .hover-nav {
+    height: 30px;
+  }
+
+  .intro p {
+    font-size: 43px;
+  }
+
+  .logo span {
+    font-size: 60px;
+  }
+
+  #blurb p {
+    font-size: 25px;
+  }
+
+  #blurb .features li {
+    font-size: 21px;
+  }
+
+  #blurb .used {
+    font-size: 18px;
+  }
 }

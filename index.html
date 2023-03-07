@@ -1,69 +1,464 @@
 <!DOCTYPE html>
-<html lang='en'>
-
-<head>
-  <meta charset='UTF-8' />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Rainey Schafer</title>
-  <meta name="description" content="Rainey Schafer's personal website">
-
-  <link rel='stylesheet' href='styles.css' />
-</head>
-
-<body id="home-background-image">
-  <div class='home'>
-    <div class="page-container">
-
-      <div class='header'>
-        <h1>RAINEY SCHAFER</h1>
-      </div>
-
-      <div class='menu'>
-
-        <div class='email-link'>
-          <a href='mailto:schafer.rainey@gmail.com'>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path fill-rule="evenodd"
-                d="M1.75 3A1.75 1.75 0 000 4.75v14c0 .966.784 1.75 1.75 1.75h20.5A1.75 1.75 0 0024 18.75v-14A1.75 1.75 0 0022.25 3H1.75zM1.5 4.75a.25.25 0 01.25-.25h20.5a.25.25 0 01.25.25v.852l-10.36 7a.25.25 0 01-.28 0l-10.36-7V4.75zm0 2.662V18.75c0 .138.112.25.25.25h20.5a.25.25 0 00.25-.25V7.412l-9.52 6.433c-.592.4-1.368.4-1.96 0L1.5 7.412z" />
-            </svg>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>RAINEY SCHAFER - WEB DEV</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <a href="/">
+            <span>rs</span>
           </a>
         </div>
 
-        <div class='github-link'>
-          <a href='https://github.com/R-Schafer' target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
-            </svg>
-          </a>
-        </div>
+        <button type="button" class="hamburger">
+          <div class="bar"></div>
+        </button>
 
-        <div class='linkedin-link'>
-          <a href='https://www.linkedin.com/in/raineyschafer/' target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-              <path
-                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
-            </svg>
-          </a>
-        </div>
+        <nav class="mobile-nav">
+          <div class="mobile-container">
+            <div class="about-container">
+              <span class="title">ABOUT</span>
+              <ul>
+                <li id="about" class="hover-nav">Who am I</li>
+              </ul>
+            </div>
+            <div class="project-container">
+              <span class="title">PROJECTS</span>
+              <ul>
+                <li id="twitter" class="hover-nav">Twitter Clone</li>
+                <li id="world" class="hover-nav">Where in the World</li>
+                <li id="calculator" class="hover-nav">Calculator</li>
+                <li id="weather" class="hover-nav">Rain or Shine</li>
+              </ul>
+            </div>
+            <div class="links">
+              <span class="title">CONTACT</span>
+              <div class="link-container">
+                <div class="link">
+                  <a href="mailto:schafer.rainey@gmail.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path
+                        fill-rule="evenodd"
+                        d="M1.75 3A1.75 1.75 0 000 4.75v14c0 .966.784 1.75 1.75 1.75h20.5A1.75 1.75 0 0024 18.75v-14A1.75 1.75 0 0022.25 3H1.75zM1.5 4.75a.25.25 0 01.25-.25h20.5a.25.25 0 01.25.25v.852l-10.36 7a.25.25 0 01-.28 0l-10.36-7V4.75zm0 2.662V18.75c0 .138.112.25.25.25h20.5a.25.25 0 00.25-.25V7.412l-9.52 6.433c-.592.4-1.368.4-1.96 0L1.5 7.412z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="https://github.com/R-Schafer" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div class="link linkedin-link">
+                  <a
+                    href="https://www.linkedin.com/in/raineyschafer/"
+                    target="_blank"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                    >
+                      <path
+                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+                <div class="link">
+                  <a href="/resume.html" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.5 1.75C7.5.784 8.284 0 9.25 0h5.5c.966 0 1.75.784 1.75 1.75V4h4.75c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0121.25 22H2.75A1.75 1.75 0 011 20.25V5.75C1 4.784 1.784 4 2.75 4H7.5V1.75zm-5 10.24v8.26c0 .138.112.25.25.25h18.5a.25.25 0 00.25-.25v-8.26A4.233 4.233 0 0118.75 13H5.25a4.233 4.233 0 01-2.75-1.01zm19-3.24a2.75 2.75 0 01-2.75 2.75H5.25A2.75 2.75 0 012.5 8.75v-3a.25.25 0 01.25-.25h18.5a.25.25 0 01.25.25v3zm-6.5-7V4H9V1.75a.25.25 0 01.25-.25h5.5a.25.25 0 01.25.25z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <img
+          class="default-image"
+          src="images/me_md.jpg"
+          alt="woman standing outside"
+        />
+        <img
+          class="about-image hidden"
+          src="images/typing_md.jpg"
+          alt="woman typing on computer"
+        />
+        <img
+          class="twitter-image hidden"
+          src="images/phone_md.jpg"
+          alt="woman holding an iphone"
+        />
+        <img class="world-image hidden" src="images/globe_md.jpg" alt="globe" />
+        <img
+          class="calculator-image hidden"
+          src="images/numbers_md.jpg"
+          alt="wooden numbered blocks"
+        />
+        <img
+          class="weather-image hidden"
+          src="images/sky_md.jpg"
+          alt="cloudy sky"
+        />
 
-        <div class='resume-link'>
-          <a href='/resume' target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path fill-rule="evenodd"
-                d="M7.5 1.75C7.5.784 8.284 0 9.25 0h5.5c.966 0 1.75.784 1.75 1.75V4h4.75c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0121.25 22H2.75A1.75 1.75 0 011 20.25V5.75C1 4.784 1.784 4 2.75 4H7.5V1.75zm-5 10.24v8.26c0 .138.112.25.25.25h18.5a.25.25 0 00.25-.25v-8.26A4.233 4.233 0 0118.75 13H5.25a4.233 4.233 0 01-2.75-1.01zm19-3.24a2.75 2.75 0 01-2.75 2.75H5.25A2.75 2.75 0 012.5 8.75v-3a.25.25 0 01.25-.25h18.5a.25.25 0 01.25.25v3zm-6.5-7V4H9V1.75a.25.25 0 01.25-.25h5.5a.25.25 0 01.25.25z" />
-            </svg>
-          </a>
+        <div class="hero-container">
+          <div class="hero-left">
+            <div class="intro">
+              <span class="title">HI THERE, I'M</span>
+              <p>Rainey, a Web Developer in Austin, TX.</p>
+            </div>
+            <div id="blurb" class="about hidden">
+              <div class="title">ABOUT</div>
+              <p>
+                As a self-taught Web Developer, the journey has been challenging
+                yet rewarding. Though it requires dedication to continuous
+                learning, I enjoy the creativity and problem solving involved in
+                designing and building responsive applications.
+              </p>
+              <p>
+                When I'm not programming, you can find me at a garden center,
+                antique shopping, or hiking with my dog.
+              </p>
+              <div class="go-to-links">
+                <a href="/resume/resume.html" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      fill-rule="evenodd"
+                      d="M7.5 1.75C7.5.784 8.284 0 9.25 0h5.5c.966 0 1.75.784 1.75 1.75V4h4.75c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0121.25 22H2.75A1.75 1.75 0 011 20.25V5.75C1 4.784 1.784 4 2.75 4H7.5V1.75zm-5 10.24v8.26c0 .138.112.25.25.25h18.5a.25.25 0 00.25-.25v-8.26A4.233 4.233 0 0118.75 13H5.25a4.233 4.233 0 01-2.75-1.01zm19-3.24a2.75 2.75 0 01-2.75 2.75H5.25A2.75 2.75 0 012.5 8.75v-3a.25.25 0 01.25-.25h18.5a.25.25 0 01.25.25v3zm-6.5-7V4H9V1.75a.25.25 0 01.25-.25h5.5a.25.25 0 01.25.25z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div id="blurb" class="twitter hidden">
+              <div class="title">TWITTER CLONE</div>
+              <p>
+                This app allows the user to create an account, login, logout,
+                delete account, tweet, and view tweets from selected accounts.
+              </p>
+
+              <div class="features">
+                <div class="title">FEATURES</div>
+                <ul>
+                  <li>Demo</li>
+                  <li>Authentication</li>
+                  <li>Loading indicator</li>
+                  <li>Error handling</li>
+                  <li>Dynamic routing</li>
+                  <li>Firebase/Firestore storage</li>
+                  <li>Replication of Twitter design</li>
+                </ul>
+              </div>
+
+              <div class="used">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>React</span>
+                <span>Firebase</span>
+                <span>Firestore</span>
+                <span>Git</span>
+                <span>Netlify</span>
+              </div>
+
+              <div class="go-to-links">
+                <a
+                  href="https://github.com/R-Schafer/learning_backend/tree/master/twitter_clone"
+                  target="_blank"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://startling-frangipane-65354b.netlify.app/"
+                  target="_blank"
+                >
+                  <svg
+                    class="open"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 525 525"
+                  >
+                    <path
+                      d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div id="blurb" class="world hidden">
+              <div class="title">WHERE IN THE WORLD</div>
+
+              <p>
+                This app fetches and presents JSON country data. The user can
+                search for a specific country, filter by region, and review
+                additional details of a selected country.
+              </p>
+
+              <div class="features">
+                <div class="title">FEATURES</div>
+                <ul>
+                  <li>Search bar</li>
+                  <li>Dropdown menu</li>
+                  <li>Filter capabilities</li>
+                  <li>Dark mode, defaults to computer settings</li>
+                </ul>
+              </div>
+
+              <div class="used">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Git</span>
+                <span>Netlify</span>
+              </div>
+
+              <div class="go-to-links">
+                <a
+                  href="https://github.com/R-Schafer/learning_web_applications/tree/master/js_countries"
+                  target="_blank"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://magical-bublanina-122969.netlify.app/"
+                  target="_blank"
+                >
+                  <svg
+                    class="open"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div id="blurb" class="calculator hidden">
+              <div class="title">CALCULATOR</div>
+
+              <p>
+                This app handles addition, subtraction, multiplication and
+                division. The user has the ability to clears the screen,
+                backspace and changes numbers from positive to negative and vice
+                versa.
+              </p>
+
+              <div class="features">
+                <div class="title">FEATURES</div>
+                <ul>
+                  <li>Clean and simple design</li>
+                  <li>Standard calculator functions</li>
+                  <li>Clear and backspace</li>
+                  <li>Negative/postive toggle button</li>
+                </ul>
+              </div>
+
+              <div class="used">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Git</span>
+                <span>Netlify</span>
+              </div>
+
+              <div class="go-to-links">
+                <a
+                  href="https://github.com/R-Schafer/learning_web_applications/tree/master/js_calculator"
+                  target="_blank"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://astonishing-madeleine-dbae3c.netlify.app/"
+                  target="_blank"
+                >
+                  <svg
+                    class="open"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 525 525"
+                  >
+                    <path
+                      d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div id="blurb" class="weather hidden">
+              <div class="title">RAIN OR SHINE</div>
+
+              <p>
+                This app fetches and presents JSON weather data. Allows the user
+                to search the forecast in desired locations and provides 12 hour
+                - 3 day forecasts.
+              </p>
+
+              <div class="features">
+                <div class="title">FEATURES</div>
+                <ul>
+                  <li>Clean and simple design</li>
+                  <li>Loading indicator</li>
+                  <li>Error handling</li>
+                  <li>Location search bar</li>
+                </ul>
+              </div>
+
+              <div class="used">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Git</span>
+                <span>Netlify</span>
+              </div>
+
+              <div class="go-to-links">
+                <a
+                  href="https://github.com/R-Schafer/learning_web_applications/tree/master/js_weather_application"
+                  target="_blank"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                    />
+                  </svg>
+                </a>
+                <a
+                  href="https://vermillion-pudding-e18ce7.netlify.app/"
+                  target="_blank"
+                >
+                  <svg
+                    class="open"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 525 525"
+                  >
+                    <path
+                      d="M352 0c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9L370.7 96 201.4 265.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L416 141.3l41.4 41.4c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6V32c0-17.7-14.3-32-32-32H352zM80 32C35.8 32 0 67.8 0 112V432c0 44.2 35.8 80 80 80H400c44.2 0 80-35.8 80-80V320c0-17.7-14.3-32-32-32s-32 14.3-32 32V432c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16H192c17.7 0 32-14.3 32-32s-14.3-32-32-32H80z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="hero-right">
+            <nav class="menu">
+              <div class="about-container">
+                <span class="title">ABOUT</span>
+                <ul>
+                  <li id="about" class="hover-nav">Who am I</li>
+                </ul>
+              </div>
+
+              <div class="project-container">
+                <span class="title">PORTFOLIO</span>
+                <ul>
+                  <li id="twitter" class="hover-nav">Twitter Clone</li>
+                  <li id="world" class="hover-nav">Where in the World</li>
+                  <li id="calculator" class="hover-nav">Calculator</li>
+                  <li id="weather" class="hover-nav">Rain or Shine</li>
+                </ul>
+              </div>
+
+              <div class="links">
+                <span class="title">CONTACT</span>
+                <div class="link-container">
+                  <div class="link">
+                    <a href="mailto:schafer.rainey@gmail.com">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M1.75 3A1.75 1.75 0 000 4.75v14c0 .966.784 1.75 1.75 1.75h20.5A1.75 1.75 0 0024 18.75v-14A1.75 1.75 0 0022.25 3H1.75zM1.5 4.75a.25.25 0 01.25-.25h20.5a.25.25 0 01.25.25v.852l-10.36 7a.25.25 0 01-.28 0l-10.36-7V4.75zm0 2.662V18.75c0 .138.112.25.25.25h20.5a.25.25 0 00.25-.25V7.412l-9.52 6.433c-.592.4-1.368.4-1.96 0L1.5 7.412z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="link">
+                    <a href="https://github.com/R-Schafer" target="_blank">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="link linkedin-link">
+                    <a
+                      href="https://www.linkedin.com/in/raineyschafer/"
+                      target="_blank"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 448 512"
+                      >
+                        <path
+                          d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="link">
+                    <a href="/resume/resume.html" target="_blank">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M7.5 1.75C7.5.784 8.284 0 9.25 0h5.5c.966 0 1.75.784 1.75 1.75V4h4.75c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0121.25 22H2.75A1.75 1.75 0 011 20.25V5.75C1 4.784 1.784 4 2.75 4H7.5V1.75zm-5 10.24v8.26c0 .138.112.25.25.25h18.5a.25.25 0 00.25-.25v-8.26A4.233 4.233 0 0118.75 13H5.25a4.233 4.233 0 01-2.75-1.01zm19-3.24a2.75 2.75 0 01-2.75 2.75H5.25A2.75 2.75 0 012.5 8.75v-3a.25.25 0 01.25-.25h18.5a.25.25 0 01.25.25v3zm-6.5-7V4H9V1.75a.25.25 0 01.25-.25h5.5a.25.25 0 01.25.25z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
         </div>
-      </div>
+      </main>
+      <footer></footer>
     </div>
-
-    <div class="footer">
-      <span>Copyright &copy; 2022 Rainey Schafer</span>
-    </div>
-
-  </div>
-</body>
-
+  </body>
 </html>
