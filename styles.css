@@ -289,7 +289,7 @@ p {
   padding: 2px 3px;
   border-radius: 3px;
   margin: 1px 4px 4px 0px;
-  background-color: #444444;
+  background-color: #dc7f0e;
 }
 
 #blurb .title {
@@ -465,5 +465,14 @@ footer {
 
   #blurb .used {
     font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  #blurb {
+    width: 400px;
+  }
+  #blurb p {
+    margin-top: 10px;
   }
 }

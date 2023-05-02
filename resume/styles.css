@@ -126,6 +126,7 @@ p {
 
 .skills,
 .portfolio,
+.history,
 .education,
 hr {
   margin-top: 10px;
@@ -134,11 +135,13 @@ hr {
 .about-content,
 .skills-content,
 .portfolio-content,
+.history-content,
 .education-content {
   margin-left: 10px;
 }
 
 .portfolio-content h3,
+.history-content h3,
 .education-content h3 {
   padding-top: 10px;
 }
@@ -158,22 +161,26 @@ hr {
 }
 
 .portfolio-content li,
+.history-content li,
 .education-content li {
   padding-top: 3px;
 }
 
 .portfolio-content ul,
+.history-content ul,
 .education-content ul {
   padding-left: 20px;
 }
 
-.portfolio-content span {
+.portfolio-content span,
+.history-content span {
   font-size: 1rem;
   font-weight: normal;
 }
 
 .education-content a,
-.portfolio-content .repo {
+.portfolio-content .repo,
+.history-content .company {
   font-size: 1rem;
 }
 
@@ -199,10 +206,8 @@ hr {
 
 @media print {
   body {
-    width: 100%;
+    width: 90%;
     height: 100%;
-    margin: 0;
-    padding: 0;
   }
 
   .name {
@@ -225,8 +230,10 @@ hr {
   .header-icons span,
   .skills-content span,
   .portfolio-content span,
-  .education-content a,
-  .portfolio-content .repo {
+  .portfolio-content .repo,
+  .history-content span,
+  .history-content .company,
+  .education-content a {
     font-size: 14px;
   }
 
